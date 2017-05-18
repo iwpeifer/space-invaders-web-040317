@@ -1,0 +1,22 @@
+class Spaceship {
+
+  constructor(name, crewMembers, phasers, shields){
+    this.name = name
+    this.crewMembers = crewMembers
+    if (this.crewMembers.length === 0){
+      this.docked = true
+    } else {
+      this.docked = false
+      for (let i = 0; i < this.crewMembers.length; i++){
+        crewMembers[i].currentShip = this
+      }
+    }
+    this.phasers = phasers
+    this.shields = shields
+    this.cloaked = false
+    this.phasersCharge = 'uncharged'
+    this.cloaked = false
+    this.warpDrive = 'disengaged'
+  }
+
+}
